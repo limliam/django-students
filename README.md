@@ -105,4 +105,39 @@ python manage.py test --pattern="tests.py"
 Go to http://127.0.0.1:8000/ to view the application.
 
 
+### Additional consideration for deploying to Heroku.
+
+1. Update ALLOWED_HOSTS
+
+settings.py
+
+if IS_HEROKU_APP:
+    ALLOWED_HOSTS = ["*"]
+else:
+    ALLOWED_HOSTS = []
+
+2. Static file issue with heroku
+
+use absolute path such as CDN or AWS S3 bucket to host static files such as css or images.
+
+base.html
+
+<link href="https://django-8379538-staticfiles.s3.ap-southeast-2.amazonaws.com/bootstrap.min.css" rel="stylesheet">
+
+
+### how to add css in aws s3 bucket?
+
+Login aws
+Create a bucket
+Add css file
+ake the buclet publically accessible
+Add a permission policy.
+Use AWS Policy Generator
+Don't forget to add /* at the end of the bucket arn name
+e.g. the generator writes as: 
+"Resource": "arn:aws:s3:::mybucketname"
+--> this cause error.
+So you need to add /* to make it as 
+"Resource": "arn:aws:s3:::mybucketname/*"
+
 ### Copyright and License

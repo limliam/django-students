@@ -12,6 +12,8 @@ def index(request):
     'students': Student.objects.all()
   })
 
+def about(request):
+    return render(request, 'students/about.html')
 
 def view_student(request, id):
   return HttpResponseRedirect(reverse('index'))

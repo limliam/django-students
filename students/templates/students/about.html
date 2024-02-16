@@ -1,0 +1,34 @@
+{% extends "students/base.html" %}
+
+{% block body %}
+  <h3 class="text-center m-4">About</h3>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card bg-light mb-3">
+        <div class="card-body">    
+            <p> Django CRUD Demo Application </p>       
+            <ul>            
+                <li>This is a student management system built using Python, Django, PostgreSql, HTML, CSS, Bootstrap. </li>
+                <li>The application is hosted in Heroku.</li>
+                <li>Static files are hosted in AWS S3 bucket. </li>            
+                <li>The purpose of the app is to demonstrate the CRUD operation in diango app. </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <p>Step to build and deploy the app</p>      
+            <ul><li>
+                Github (Source code and steps to build and deploy in Heroku): 
+                <a href="https://github.com/limliam/django-students">https://github.com/limliam/django-students</a>
+            </li></ul>                
+        </div>
+
+        <div class="card-body">
+            <p>About me and my resume</p>      
+            <ul><li>
+                <a href="http://liam-project.click/">http://liam-project.click/</a>
+            </li></ul>                
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -4,7 +4,9 @@
   <head>
     <title>Django Student Management App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"> -->
+    <!-- This css is now being served in AWS S3 bucket -->
+    <link href="https://django-8379538-staticfiles.s3.ap-southeast-2.amazonaws.com/bootstrap.min.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
